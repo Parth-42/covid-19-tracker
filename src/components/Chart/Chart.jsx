@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchDailyData } from "../../api/index";
 import { Line, Bar } from "react-chartjs-2";
-import chartjs from "chart.js";
 
 import styles from "./Chart.module.css";
 
@@ -55,7 +54,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
       }}
       options={
         ({ legend: { display: false } },
-        { title: { display: true, text: `Current State in ${country}` } })
+          { title: { display: true, text: `Current State in ${country}` } })
       }
     />
   ) : null;
